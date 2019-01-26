@@ -1,0 +1,329 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+body
+  background-color: #F6F8FF
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-center
+	text-align: center
+
+ul
+  margin: 0
+  padding: 0
+h1, h2, h3, h4, h5, h6
+  margin: 0
+  padding: 0
+h1
+  font-size: 32px
+p
+  font-size: 14px
+
+  //Кнопки
+.flex-row
+  display: flex
+  flex-direction: row
+.button
+  border: none
+  padding: 8px 30px
+  border-radius: 4px
+.button_accent
+  background-color: $accent-color-1
+  color: #fff
+  border: 2px solid $accent-color-1
+  transition: all .5s ease
+  &:hover
+    background-color: #fff
+    color: $accent-color-1
+    z-index: 2
+    font-weight: bold
+.button_default
+  border: 2px solid $accent-color-1
+  background-color: #fff
+  color: $accent-color-1
+  font-weight: bold
+  transition: all .5s ease
+  &:hover
+    background-color: $accent-color-1
+    border: 2px solid #fff
+    color: #fff
+.button_red
+  background-color: #FC3974
+  color: #fff
+  font-weight: bold
+  font-size: 18px
+  transition: all .5s ease
+  &:hover
+    background-color: $accent-color-1
+.button_buy
+  background-color: $accent-color-1
+  font-size: 18px
+  color: #fff
+  padding: 10px 30px
+.section_1
+  padding: 30px 0
+.logo_wrapper
+  height: 100%
+  display: flex
+  flex-direction: row
+  align-items: center
+.information_wrapper
+  height: 100%
+  display: flex
+  flex-direction: row
+  align-items: center
+  .information_list
+    list-style-type: none
+    display: flex
+    flex-direction: row
+    .information_item
+      display: flex
+      flex-direction: row
+      align-items: center
+      justify-content: center
+      margin-right: 40px
+      p
+        margin-left: 20px
+        padding: 0
+        margin-top: 0
+        margin-bottom: 0
+        color: $accent-color-1
+      &:nth-child(2)
+        p
+          font-weight: bolder
+          font-size: 18px
+.signin_wrapper
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: flex-end
+  .button_default
+    margin-left: 10px
+  .cart
+    background-color: $accent-color-1
+    padding: 9px 12px
+    border-radius: 4px
+    margin-left: 10px
+
+.main_nav
+  padding: 10px 0
+  background-color: $accent-color-1
+  .button_wrapper
+    height: 100%
+    display: flex
+    flex-direction: row
+    align-items: center
+.menu_wrapper
+  display: flex
+  flex-direction: row
+  height: 100%
+  align-items: center
+  .menu_list
+    list-style-type: none
+    width: 100%
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    .menu_item
+      a
+        color: #fff
+        position: relative
+        &:before
+          position: absolute
+          content: ''
+          left: 0
+          bottom: -3px
+          width: 0
+          height: 3px
+          transition: all .5s ease
+          background-color: lighten($accent-color-2, 10%)
+        &:hover
+          text-decoration: none
+          &:before
+            width: 100%
+.header
+  padding: 60px 0
+  .header_wrapper
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    padding: 32px 30px
+    background-color: #fff
+    border-radius: 4px
+    background-image: url(/img/elipce.svg)
+    h1
+      width: 32%
+      color: #fff
+      font-weight: bold
+      line-height: 38px
+.carousel_wrapper
+  .uk-dotnav
+    display: flex
+    flex-direction: row
+    align-items: center
+    li
+      a
+        background-color: $accent-color-1
+    .uk-active
+      a
+        background-color: $accent-color-2
+        width: 15px
+        height: 15px
+  .top_carousel
+
+    a[uk-slider-item="previous"]
+      background-color: $accent-color-1
+      border-radius: 4px
+      fill: red
+    a[uk-slider-item="next"]
+      background-color: $accent-color-1
+      border-radius: 4px
+      fill: red
+  .uk-slider-items
+    .carousel_goods_item
+      background-color: #fff
+      color: $font-color
+      border-radius: 4px
+      overflow: hidden
+      transition: all .5s ease
+      &:hover
+        box-shadow: 0 0 10px rgba(0,0,0,.12)
+        .carousel_goods_item_bot
+          img
+            transform: scale(1.3)
+          .button_buy
+            background-color: $accent-color-1
+            color: #fff
+      .carousel_goods_item_top
+        padding: 20px
+        h3
+          color: $font-color
+          font-size: 16px
+          font-weight: bold
+      .carousel_goods_item_bot
+        img
+          transition: all .5s ease
+          min-width: 100%
+        .button_buy
+          width: 100%
+          border: none
+          position: relative
+          background-color: #fff
+          color: $font-color
+          transition: all .5s ease
+.adv_wrapper
+  margin: 20px 0
+  position: relative
+  border-radius: 4px
+  overflow: hidden
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    background: linear-gradient(to right, $accent-color-2 40%, transparent)
+  .adv_content
+    position: absolute
+    left: 40px
+    width: 100%
+    height: 100%
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    justify-content: center
+    h3
+      color: #fff
+      margin-top: 0
+      font-size: 16px
+      margin-bottom: 20px
+.adv_wrapper_2
+  margin: 20px 0
+  position: relative
+  border-radius: 4px
+  overflow: hidden
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    background: linear-gradient(to right, $accent-color-1 40%, transparent)
+  .adv_content
+    position: absolute
+    left: 40px
+    width: 100%
+    height: 100%
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    justify-content: center
+    h3
+      color: #fff
+      margin-top: 0
+      font-size: 16px
+      margin-bottom: 20px
+.popular_goods
+  margin-top: 30px
+  padding: 30px 0
+  background-color: #E5EBFF
+  h2
+    font-size: 30px
+    margin-bottom: 30px
+  .popular_goods_list
+    li
+      a
+        font-size: 16px
+
+::selection
+	background-color: $accent-color-1
+	color: #fff
+
+@import "uikit.css"
+@import "media" // Всегда в конце
